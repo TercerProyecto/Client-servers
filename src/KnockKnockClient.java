@@ -9,7 +9,7 @@ public class KnockKnockClient {
     BufferedReader in = null;
 
     try {
-      kkSocket = new Socket("172.26.100.186",4444);
+      kkSocket = new Socket("localhost",6000);
       out = new PrintWriter(kkSocket.getOutputStream(), true);
       in = new BufferedReader(new InputStreamReader(kkSocket.getInputStream()));
     } catch (UnknownHostException e) {
