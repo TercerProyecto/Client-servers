@@ -9,15 +9,15 @@ public class KnockKnockClient {
     BufferedReader in = null;
 
     try {
-      kkSocket = new Socket("localhost",4444);
+      kkSocket = new Socket("172.26.100.186",4444);
       out = new PrintWriter(kkSocket.getOutputStream(), true);
       in = new BufferedReader(new InputStreamReader(kkSocket.getInputStream()));
     } catch (UnknownHostException e) {
-      System.err.println("Don't know about host: manis.csi.ull.es.");
-      System.exit(1);
+        System.err.println("Don't know about host: manis.csi.ull.es.");
+        System.exit(1);
     } catch (IOException e) {
-      System.err.println("Couldn't get I/O for the connection to: manis.csi.ull.es.");
-      System.exit(1);
+        System.err.println("Couldn't get I/O for the connection to: manis.csi.ull.es.");
+        System.exit(1);
     }
 
     BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
